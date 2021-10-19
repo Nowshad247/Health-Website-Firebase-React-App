@@ -1,0 +1,97 @@
+[debug] [2021-10-19T15:25:52.931Z] ----------------------------------------------------------------------
+[debug] [2021-10-19T15:25:52.933Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Nowshad\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-10-19T15:25:52.934Z] CLI Version:   9.20.0
+[debug] [2021-10-19T15:25:52.934Z] Platform:      win32
+[debug] [2021-10-19T15:25:52.934Z] Node Version:  v14.17.1
+[debug] [2021-10-19T15:25:52.934Z] Time:          Tue Oct 19 2021 21:25:52 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-10-19T15:25:52.934Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-19T15:25:53.000Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-19T15:25:53.000Z] > authorizing via signed-in user (mdnowshad9@gmail.com)
+[debug] [2021-10-19T15:25:53.000Z] [iam] checking project doccure-d0774 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-10-19T15:25:53.003Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-10-19T15:25:53.003Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-19T15:25:54.364Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Tue, 19 Oct 2021 15:25:35 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-19T15:25:54.379Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/doccure-d0774:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-10-19T15:25:55.752Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 19 Oct 2021 15:25:38 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1151","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-19T15:25:55.757Z] > refreshing access token with scopes: []
+[debug] [2021-10-19T15:25:55.758Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-19T15:26:16.800Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2021-10-19T15:27:51.441Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\Nowshad\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:141:12)
+    at refreshTokens (C:\Users\Nowshad\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:448:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Client.getAccessToken (C:\Users\Nowshad\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:144:23)
+    at async Client.addAuthHeader (C:\Users\Nowshad\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:135:21)
+    at async Client.request (C:\Users\Nowshad\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:93:34)
+    at async Object.getFirebaseProject (C:\Users\Nowshad\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.getDefaultHostingSite (C:\Users\Nowshad\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (C:\Users\Nowshad\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
+    at async Object.fn (C:\Users\Nowshad\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:65:9)
+    at async C:\Users\Nowshad\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:188:17
+[error] 
+[error] Error: Failed to get Firebase project doccure-d0774. Please make sure the project exists and your account has permission to access it.
+[debug] [2021-10-19T15:29:42.975Z] ----------------------------------------------------------------------
+[debug] [2021-10-19T15:29:42.978Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Nowshad\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-10-19T15:29:42.978Z] CLI Version:   9.20.0
+[debug] [2021-10-19T15:29:42.979Z] Platform:      win32
+[debug] [2021-10-19T15:29:42.979Z] Node Version:  v14.17.1
+[debug] [2021-10-19T15:29:42.979Z] Time:          Tue Oct 19 2021 21:29:42 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-10-19T15:29:42.979Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-19T15:29:43.055Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-19T15:29:43.055Z] > authorizing via signed-in user (mdnowshad9@gmail.com)
+[debug] [2021-10-19T15:29:43.055Z] [iam] checking project doccure-d0774 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-10-19T15:29:43.057Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/doccure-d0774:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-10-19T15:29:50.061Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 19 Oct 2021 15:29:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1152","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-19T15:29:50.067Z] > refreshing access token with scopes: []
+[debug] [2021-10-19T15:29:50.068Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-19T15:29:50.343Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Tue, 19 Oct 2021 15:29:32 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-19T15:29:50.396Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/doccure-d0774 [none]
+[debug] [2021-10-19T15:29:51.972Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/doccure-d0774 200
+[debug] [2021-10-19T15:29:51.973Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/doccure-d0774 {"projectId":"doccure-d0774","projectNumber":"495100378143","displayName":"doccure","name":"projects/doccure-d0774","resources":{"hostingSite":"doccure-d0774"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'doccure-d0774'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-10-19T15:29:51.989Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-10-19T15:29:51.990Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-19T15:29:56.491Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Tue, 19 Oct 2021 15:29:34 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-19T15:29:56.516Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/doccure-d0774/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-10-19T15:30:57.055Z] Error: socket hang up
+    at connResetException (internal/errors.js:628:14)
+    at TLSSocket.socketOnEnd (_http_client.js:499:23)
+    at TLSSocket.emit (events.js:387:35)
+    at TLSSocket.emit (domain.js:470:12)
+    at endReadableNT (internal/streams/readable.js:1317:12)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21)
+[error] 
+[error] Error: Server Error. socket hang up
+[debug] [2021-10-19T15:31:21.923Z] ----------------------------------------------------------------------
+[debug] [2021-10-19T15:31:21.925Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Nowshad\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-10-19T15:31:21.926Z] CLI Version:   9.20.0
+[debug] [2021-10-19T15:31:21.926Z] Platform:      win32
+[debug] [2021-10-19T15:31:21.926Z] Node Version:  v14.17.1
+[debug] [2021-10-19T15:31:21.926Z] Time:          Tue Oct 19 2021 21:31:21 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-10-19T15:31:21.926Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-19T15:31:22.013Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-19T15:31:22.013Z] > authorizing via signed-in user (mdnowshad9@gmail.com)
+[debug] [2021-10-19T15:31:22.014Z] [iam] checking project doccure-d0774 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-10-19T15:31:22.016Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/doccure-d0774:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-10-19T15:31:23.417Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 19 Oct 2021 15:31:05 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1135","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-19T15:31:23.420Z] > refreshing access token with scopes: []
+[debug] [2021-10-19T15:31:23.421Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>

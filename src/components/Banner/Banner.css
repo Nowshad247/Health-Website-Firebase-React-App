@@ -33,10 +33,11 @@
     color: white;
 }
 .input-box{
-    min-width: 400px;
+    min-width: 100px;
+    max-width: 400px;
     border: 1px solid gray;
     display: flex;
 }
 .input-box input{
-    widows: 200px;
+    width: 200px;
 }

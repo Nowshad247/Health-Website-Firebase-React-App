@@ -6,6 +6,7 @@ import LoginFrom from './LoginFrom';
 import { useState } from 'react';
 import RegForm from './RegForm';
 import { Redirect, useHistory, useLocation } from 'react-router';
+import { useEffect } from 'react';
 const LoginPage = () => {
     const { signinUsinggoogle, signinUsinggit, error, user } = useFirebase();
     const [isLogin, setIsLogin] = useState(false);
@@ -25,6 +26,11 @@ const LoginPage = () => {
             history.push(redirect_uri.pathname);
         })
     }
+    useEffect(() => {
+        if (user.email) {
+            history.push('/');
+        }
+    }, user.email)
 
     return (
         <>

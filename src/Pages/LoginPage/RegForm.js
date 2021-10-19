@@ -17,7 +17,8 @@ const RegForm = () => {
         setPassword(e.target.value);
     }
     const signup = () => {
-        registerNewUser(email, password, name)
+        registerNewUser(email, password, name);
+
     }
     return (
         <div>
