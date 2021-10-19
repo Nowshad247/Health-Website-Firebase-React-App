@@ -46,19 +46,24 @@ const useFirebase = () => {
         onAuthStateChanged(auth, user => {
             if (user) {
                 setUser(user);
+            } else {
+                setUser({})
             }
+            setLoading(false);
         })
     }, []);
     const logout = () => {
+        setLoading(true);
         signOut(auth).then(() => {
             setUser({});
         }).catch((error) => {
-
-        });
+            setError(error)
+        }).finally(() => setLoading(false));
     }
     return {
         user,
         error,
+        loading,
         signinUsinggoogle,
         signinUsinggit,
         logout,

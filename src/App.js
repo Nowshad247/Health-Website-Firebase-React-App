@@ -14,6 +14,10 @@ import LoginPage from './Pages/LoginPage/LoginPage';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import DoctorProfile from './Pages/DoctorProfile/DoctorProfile';
+import UserProfile from './Pages/UserProfile/UserProfile';
+import ContactUs from './Pages/ContactUs/ContactUs';
+import AboutUs from './Pages/AboutUs/AboutUs';
+import BookingForm from './Pages/Booking/BookingForm';
 function App() {
   return (
     <>
@@ -27,12 +31,27 @@ function App() {
             <Route exact path='/home'>
               <Home></Home>
             </Route>
+            <Route exact path='/contact-us'>
+              <ContactUs></ContactUs>
+            </Route>
+            <Route exact path='/about-us'>
+              <AboutUs></AboutUs>
+            </Route>
             <Route exact path='/login'>
               <LoginPage />
             </Route>
             <Route exact path='/reg'>
               <LoginPage></LoginPage>
             </Route>
+
+            {/* Private route */}
+            <PrivateRoute exact path='/booking-form'>
+              <BookingForm></BookingForm>
+            </PrivateRoute>
+            <PrivateRoute exact path='/my-profile'>
+              <UserProfile></UserProfile>
+            </PrivateRoute>
+            {/* Private route */}
             <PrivateRoute exact path='/booking/:id'>
               <DoctorProfile></DoctorProfile>
             </PrivateRoute>

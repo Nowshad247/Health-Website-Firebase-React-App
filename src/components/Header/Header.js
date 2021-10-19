@@ -20,12 +20,15 @@ const Header = (props) => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to='/'>Home</Nav.Link>
+                            <Nav.Link as={Link} to='/booking-form'>Booking</Nav.Link>
                             <Nav.Link as={HashLink} to="/home#Specialities">Specialities</Nav.Link>
                             <Nav.Link as={HashLink} to="/home#Doctor">Doctor List</Nav.Link>
-                            <Nav.Link as={HashLink} to="/home#about">About </Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#about">Working Process </Nav.Link>
                         </Nav>
                         <Nav>
-                            <h5>{user?.displayName}</h5>
+                            <Nav.Link as={Link} to="/about-us">About Us </Nav.Link>
+                            <Nav.Link as={Link} to="/contact-us">Contact Us </Nav.Link>
+                            <Nav.Link as={HashLink} to="/my-profile">{user?.displayName}</Nav.Link>
                             {
                                 user?.email ? <button className="btn btn-success m-4" onClick={logout}>log out</button> : <Nav.Link as={Link} to='/login' >Login/Sign Up</Nav.Link>
                             }

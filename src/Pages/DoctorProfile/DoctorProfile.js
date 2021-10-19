@@ -9,12 +9,17 @@ import Button from 'react-bootstrap/Button'
 const DoctorProfile = (props) => {
     const [profile, setProfile] = useState([]);
     const { id } = useParams();
+    const history = useHistory();
 
     useEffect(() => {
         const currentprofile = alldata.find(data => data.id === id);
         setProfile(currentprofile);
     }, [])
     const { name, title, image, specialities, address, rating, price } = profile;
+    const handelBooking = () => {
+
+        history.push('/booking-form')
+    }
     return (
         <div className='container'>
             <div className="row">
@@ -33,7 +38,7 @@ const DoctorProfile = (props) => {
                         <div className="col-md-2 col-lg-2 col-2">
                             <p> <FcCurrencyExchange /> {price} USD</p>
                             <p><FaLocationArrow />  {address}</p>
-                            <Button variant="primary" className='btn btn-custom-book'>BOOK APPOINTMENT</Button>
+                            <Button variant="primary" className='btn btn-custom-book' onClick={handelBooking}>BOOK APPOINTMENT</Button>
                         </div>
 
                     </div>
